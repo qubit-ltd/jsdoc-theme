@@ -1,6 +1,6 @@
 {
     "name": "@qubit-ltd/jsdoc-theme",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "description": "A customized JSDoc theme based on clean-jsdoc-theme, enhanced with properties table and constructor detection features for Qubit projects.",
     "main": "publish.js",
     "author": "Haixing Hu (starfish.hu@gmail.com)",
