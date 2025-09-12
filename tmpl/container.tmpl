@@ -144,6 +144,23 @@
         // Collect property information directly from members
         var allMembers = self.find({kind: 'member', memberof: isGlobalPage ? {isUndefined: true} : doc.longname, ...shouldExcludeInherited});
 
+        // Add mixin properties if this class has @mixes tags
+        if (doc.mixes && doc.mixes.length) {
+            doc.mixes.forEach(function(mixinName) {
+                var mixinMembers = self.find({kind: 'member', memberof: mixinName});
+                if (mixinMembers && mixinMembers.length) {
+                    // Add inherited flag and source info to mixin members
+                    mixinMembers.forEach(function(mixinMember) {
+                        mixinMember.inherited = true;
+                        mixinMember.inherits = mixinName;
+                        mixinMember.mixinSource = mixinName;
+                    });
+                    // Merge mixin members with current class members
+                    allMembers = allMembers.concat(mixinMembers);
+                }
+            });
+        }
+
         // Filter out module exports for global pages
         if (isGlobalPage && allMembers && allMembers.length && allMembers.forEach) {
             allMembers = allMembers.filter(function(m) {
