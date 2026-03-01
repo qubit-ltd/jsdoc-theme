@@ -1,6 +1,6 @@
 # qubit-jsdoc-theme
 
-[![Stars](https://img.shields.io/github/stars/Haixing-Hu/qubit-jsdoc-theme)](https://github.com/Haixing-Hu/qubit-jsdoc-theme) [![Fork](https://img.shields.io/github/forks/Haixing-Hu/qubit-jsdoc-theme)](https://github.com/Haixing-Hu/qubit-jsdoc-theme/fork) ![Version](https://img.shields.io/badge/version-1.5.0-005bff) [![Issues Open](https://img.shields.io/github/issues/Haixing-Hu/qubit-jsdoc-theme)](https://github.com/Haixing-Hu/qubit-jsdoc-theme/issues) [![Contributors](https://img.shields.io/github/contributors/Haixing-Hu/qubit-jsdoc-theme)](https://github.com/Haixing-Hu/qubit-jsdoc-theme/graphs/contributors) [![license](https://img.shields.io/github/license/Haixing-Hu/qubit-jsdoc-theme)](https://github.com/Haixing-Hu/qubit-jsdoc-theme/blob/master/LICENSE)
+[![Stars](https://img.shields.io/github/stars/qubit-ltd/jsdoc-theme)](https://github.com/qubit-ltd/jsdoc-theme) [![Fork](https://img.shields.io/github/forks/qubit-ltd/jsdoc-theme)](https://github.com/qubit-ltd/jsdoc-theme/fork) ![Version](https://img.shields.io/badge/version-1.5.0-005bff) [![Issues Open](https://img.shields.io/github/issues/qubit-ltd/jsdoc-theme)](https://github.com/qubit-ltd/jsdoc-theme/issues) [![Contributors](https://img.shields.io/github/contributors/qubit-ltd/jsdoc-theme)](https://github.com/qubit-ltd/jsdoc-theme/graphs/contributors) [![license](https://img.shields.io/github/license/qubit-ltd/jsdoc-theme)](https://github.com/qubit-ltd/jsdoc-theme/blob/master/LICENSE)
 
 <br>
 
@@ -826,8 +826,8 @@ For the base theme changelog, see [clean-jsdoc-theme changelog](https://github.c
 ## Developing
 
 ```bash
-git clone https://github.com/Haixing-Hu/qubit-jsdoc-theme.git
-cd qubit-jsdoc-theme
+git clone https://github.com/qubit-ltd/jsdoc-theme.git
+cd jsdoc-theme
 npm install
 npm install jsdoc --no-save
 npm run build
@@ -844,7 +844,7 @@ This will generate demo documentation in the `output` folder.
 
 ## Contributing
 
-We welcome contributions! Please feel free to submit issues and pull requests on [GitHub](https://github.com/Haixing-Hu/qubit-jsdoc-theme).
+We welcome contributions! Please feel free to submit issues and pull requests on [GitHub](https://github.com/qubit-ltd/jsdoc-theme).
 
 ## Acknowledgments
 
@@ -852,8 +852,8 @@ This project is based on the excellent [clean-jsdoc-theme](https://github.com/an
 
 ## Contributors
 
-<a href="https://github.com/Haixing-Hu/qubit-jsdoc-theme/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Haixing-Hu/qubit-jsdoc-theme" alt="qubit-jsdoc-theme-contributors" />
+<a href="https://github.com/qubit-ltd/jsdoc-theme/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=qubit-ltd/jsdoc-theme" alt="qubit-jsdoc-theme-contributors" />
 </a>
 
 ## Thanks
@@ -862,7 +862,7 @@ Thanks to [fuse.js](https://fusejs.io/), [hljs](https://highlightjs.org/), [tipp
 
 ## Contact
 
-If you like this project, please give it a <a href="https://github.com/Haixing-Hu/qubit-jsdoc-theme" data-icon="octicon-star" aria-label="Star Haixing-Hu/qubit-jsdoc-theme on GitHub">star</a>.
+If you like this project, please give it a <a href="https://github.com/qubit-ltd/jsdoc-theme" data-icon="octicon-star" aria-label="Star qubit-ltd/jsdoc-theme on GitHub">star</a>.
 
 Mail: <a href="mailto:starfish.hu@gmail.com">starfish.hu@gmail.com</a> <br>
 

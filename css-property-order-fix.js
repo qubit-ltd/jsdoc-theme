@@ -33,7 +33,7 @@ function parseCSS(cssContent) {
 }
 
 const cssFile = fs.readFileSync(
-  path.join(".", "static", "styles", "clean-jsdoc-theme-light.css")
+  path.join(".", "static", "styles", "clean-jsdoc-theme-light.css"),
 );
 
 const parsed = parseCSS(cssFile);
@@ -51,5 +51,5 @@ for (const parse of parsed) {
 
 fs.writeFileSync(
   path.join(".", "static", "styles", "clean-jsdoc-theme-list.update.css"),
-  output
+  output,
 );

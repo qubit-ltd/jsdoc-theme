@@ -153,7 +153,7 @@ function updateItemName(item) {
 
   if (attributes && attributes.length) {
     itemName = `${itemName}<span class="signature-attributes">${attributes.join(
-      ", "
+      ", ",
     )}</span>`;
   }
 
@@ -307,9 +307,9 @@ function prefixModuleToItemAnchor(item) {
         "a",
         modulename,
         methodname,
-        anchorLink
+        anchorLink,
       );
-    }
+    },
   );
 
   return prettyAnchor || anchor;
@@ -355,14 +355,14 @@ function generateSourceFiles(sourceFiles, packageInfo, encoding = "utf8") {
         kind: "source",
         title: sourceOutFile.replace(".html", ""),
         code: helper.htmlsafe(
-          fs.readFileSync(sourceFiles[file].resolved, encoding)
+          fs.readFileSync(sourceFiles[file].resolved, encoding),
         ),
       };
     } catch (e) {
       logger.error(
         "Error while generating source file %s: %s",
         file,
-        e.message
+        e.message,
       );
     }
 
@@ -371,7 +371,7 @@ function generateSourceFiles(sourceFiles, packageInfo, encoding = "utf8") {
       [source],
       sourceOutFile,
       false,
-      packageInfo
+      packageInfo,
     );
   });
 }
@@ -453,7 +453,7 @@ function buildSidebarMembers({
       if (!hasOwnProp.call(itemsSeen, item.longname)) {
         currentItem.anchor = linktoFn(
           item.longname,
-          item.name.replace(/^module:/, "")
+          item.name.replace(/^module:/, ""),
         );
 
         if (methods.length) {
@@ -721,7 +721,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
 
         if (
           example.match(
-            /^\s*<caption>([\s\S]+?)<\/caption>(\s*[\n\r])([\s\S]+)$/i
+            /^\s*<caption>([\s\S]+?)<\/caption>(\s*[\n\r])([\s\S]+)$/i,
           )
         ) {
           caption = RegExp.$1;
@@ -788,7 +788,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
     staticFilePaths =
       conf.default.staticFiles.include || conf.default.staticFiles.paths || [];
     staticFileFilter = new (require("jsdoc/src/filter").Filter)(
-      conf.default.staticFiles
+      conf.default.staticFiles,
     );
     staticFileScanner = new (require("jsdoc/src/scanner").Scanner)();
 
@@ -797,7 +797,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
       const extraStaticFiles = staticFileScanner.scan(
         [filePath],
         10,
-        staticFileFilter
+        staticFileFilter,
       );
 
       extraStaticFiles.forEach((fileName) => {
@@ -866,7 +866,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
 
   // output pretty-printed source files by default
   outputSourceFiles = Boolean(
-    conf.default && conf.default.outputSourceFiles !== false
+    conf.default && conf.default.outputSourceFiles !== false,
   );
 
   // add template helpers
@@ -901,7 +901,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
   view.excludeInherited = Boolean(themeOpts.exclude_inherited);
   view.baseURL = getBaseURL(themeOpts);
   view.shouldRemoveScrollbarStyle = Boolean(
-    themeOpts.shouldRemoveScrollbarStyle
+    themeOpts.shouldRemoveScrollbarStyle,
   );
   attachModuleSymbols(find({ longname: { left: "module:" } }), members.modules);
 
@@ -926,7 +926,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
       [{ kind: "globalobj" }],
       globalUrl,
       true,
-      packageInfo
+      packageInfo,
     );
   }
 
@@ -950,7 +950,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
       .concat(includeFilesListInHomepage ? files : []),
     indexUrl,
     true,
-    packageInfo
+    packageInfo,
   );
 
   // set up the lists that we'll use to generate pages
@@ -975,7 +975,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
         myModules,
         helper.longnameToUrl[longname],
         true,
-        packageInfo
+        packageInfo,
       );
     }
 
@@ -985,7 +985,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
         myClasses,
         helper.longnameToUrl[longname],
         true,
-        packageInfo
+        packageInfo,
       );
     }
 
@@ -995,7 +995,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
         myNamespaces,
         helper.longnameToUrl[longname],
         true,
-        packageInfo
+        packageInfo,
       );
     }
 
@@ -1005,7 +1005,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
         myMixins,
         helper.longnameToUrl[longname],
         true,
-        packageInfo
+        packageInfo,
       );
     }
 
@@ -1015,7 +1015,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
         myExternals,
         helper.longnameToUrl[longname],
         true,
-        packageInfo
+        packageInfo,
       );
     }
 
@@ -1025,7 +1025,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
         myInterfaces,
         helper.longnameToUrl[longname],
         true,
-        packageInfo
+        packageInfo,
       );
     }
   });
@@ -1084,7 +1084,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
       }
     } catch (error) {
       console.error(
-        "There was some error while creating search array for tutorial."
+        "There was some error while creating search array for tutorial.",
       );
       console.error(error);
     }
@@ -1096,7 +1096,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
       generateTutorial(
         `Tutorial: ${child.title}`,
         child,
-        helper.tutorialToUrl(child.name)
+        helper.tutorialToUrl(child.name),
       );
       saveChildren(child);
     });
@@ -1113,7 +1113,7 @@ exports.publish = async function (taffyData, opts, tutorials) {
       path.join(outdir, "data", "search.json"),
       JSON.stringify({
         list: searchList,
-      })
+      }),
     );
   }
 };

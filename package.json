@@ -1,6 +1,6 @@
 {
     "name": "@qubit-ltd/jsdoc-theme",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "description": "A customized JSDoc theme based on clean-jsdoc-theme, enhanced with properties table and constructor detection features for Qubit projects.",
     "main": "publish.js",
     "author": "Haixing Hu (starfish.hu@gmail.com)",
@@ -12,18 +12,16 @@
         "lint:style": "stylelint-config-prettier-check && stylelint static/styles/",
         "lint": "npm run lint:js && npm run lint:style",
         "prepublishOnly": "npm run lint && npm run build",
-        "deploy": "npm run lint && npm run build && npm publish --registry='https://npm.qubit.ltd/' --access public",
-        "deploy:public": "npm run lint && npm run build && npm publish --registry='https://registry.npmjs.org/' --access public",
-        "deploy:all": "npm run deploy && npm publish --registry='https://registry.npmjs.org/' --access public"
+        "deploy": "npm run lint && npm run build && npm publish --registry='https://registry.npmjs.org/' --access public"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Haixing-Hu/qubit-jsdoc-theme.git"
+        "url": "git+https://github.com/qubit-ltd/jsdoc-theme.git"
     },
     "bugs": {
-        "url": "https://github.com/Haixing-Hu/qubit-jsdoc-theme/issues"
+        "url": "https://github.com/qubit-ltd/jsdoc-theme/issues"
     },
-    "homepage": "https://github.com/Haixing-Hu/qubit-jsdoc-theme",
+    "homepage": "https://github.com/qubit-ltd/jsdoc-theme",
     "files": [
         "publish.js",
         "tmpl/**/*",
@@ -62,7 +60,7 @@
         "jsdoc": "^4.0.4",
         "postcss": "^8.5.6",
         "postcss-scss": "^4.0.9",
-        "prettier": "^2.2.1",
+        "prettier": "^3.3.3",
         "stylelint": "^14.9.1",
         "stylelint-config-prettier": "^9.0.3",
         "stylelint-config-sass-guidelines": "^9.0.0",

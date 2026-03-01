@@ -52,12 +52,12 @@ const minifiedCssWithScrollbar = csso.minify(cssWithScrollbar, {
 
 fs.writeFileSync(
   path.join(cssPath, "clean-jsdoc-theme.min.css"),
-  minifiedCssWithScrollbar.css
+  minifiedCssWithScrollbar.css,
 );
 
 fs.writeFileSync(
   path.join(cssPath, "clean-jsdoc-theme-without-scrollbar.min.css"),
-  minifiedCss.css
+  minifiedCss.css,
 );
 
 for (const f of uglifyFiles) {

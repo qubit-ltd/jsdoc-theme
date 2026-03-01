@@ -17,7 +17,7 @@ function loadTranslations(language) {
     __dirname,
     "..",
     "i18n",
-    `${language}.json`
+    `${language}.json`,
   );
 
   try {
@@ -29,7 +29,7 @@ function loadTranslations(language) {
   } catch (error) {
     console.warn(
       `Failed to load translations for language: ${language}`,
-      error.message
+      error.message,
     );
   }
   return false;
